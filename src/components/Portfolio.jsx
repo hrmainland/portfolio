@@ -18,20 +18,20 @@ const Portfolio = () => {
   
   const featuredProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with cart functionality",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "https://example-ecommerce.com",
-      githubUrl: "https://github.com/yourusername/ecommerce-platform",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Song Day",
+      description: "A full-stack collaborative playlist creation platform, using the Spotify API",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      liveUrl: "https://songday.co",
+      githubUrl: "https://github.com/hrmainland/Song-Day",
+      image: "/images/SD.png"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application",
-      technologies: ["Vue.js", "Express", "PostgreSQL", "Socket.io"],
-      liveUrl: "https://example-tasks.com",
-      githubUrl: "https://github.com/yourusername/task-manager",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+      title: "Yelp Camp",
+      description: "A website for posting and reviewing campsites with full auth and session management",
+      technologies: ["CSS", "Express", "JavaScript", "MongoDB", "Cloudinary"],
+      liveUrl: "https://yelpcamp-n23a.onrender.com/",
+      githubUrl: "https://github.com/hrmainland/YelpCamp",
+      image: "/images/Yelp.png"
     }
   ];
 
@@ -259,7 +259,7 @@ const Portfolio = () => {
         </Box>
         <Grid container spacing={6} justifyContent="center">
           {featuredProjects.map((project, index) => (
-            <Grid item xs={12} md={6} key={index} sx={{ display: 'flex', justifyContent: 'center', maxWidth: '450px' }}>
+            <Grid item xs={12} md={6} key={index} sx={{ display: 'flex', justifyContent: 'center', maxWidth: '450px', mx: 'auto' }}>
               <ProjectCard project={project} />
             </Grid>
           ))}

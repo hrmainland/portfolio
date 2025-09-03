@@ -44,7 +44,7 @@ const ProjectCard = ({ project }) => {
             fontWeight: 700,
             mb: 2,
             color: 'text.primary',
-            fontSize: '1.4rem'
+            fontSize: '1.6rem'
           }}
         >
           {project.title}

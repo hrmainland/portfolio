@@ -7,11 +7,18 @@ import {
   Box,
   Stack
 } from '@mui/material';
-import { GitHub, Star } from '@mui/icons-material';
+import { GitHub } from '@mui/icons-material';
 
 const GitHubRepoCard = ({ repo }) => {
+  const handleCardClick = (e) => {
+    // Don't trigger card click if button was clicked
+    if (e.target.closest('button')) return;
+    window.open(repo.githubUrl, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <Card
+      onClick={handleCardClick}
       sx={{
         minWidth: 300,
         maxWidth: 340,
@@ -21,6 +28,7 @@ const GitHubRepoCard = ({ repo }) => {
         boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)',
         border: '1px solid',
         borderColor: 'rgba(129, 140, 248, 0.2)',
+        cursor: 'pointer',
         '&:hover': {
           transform: 'translateY(-6px) scale(1.02)',
           boxShadow: '0 12px 30px rgba(129, 140, 248, 0.3)',
@@ -29,27 +37,19 @@ const GitHubRepoCard = ({ repo }) => {
       }}
     >
       <CardContent sx={{ p: 3 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 2 }}>
-          <Typography
-            variant="h6"
-            component="h4"
-            sx={{
-              fontWeight: 600,
-              color: 'text.primary',
-              flex: 1,
-              lineHeight: 1.3,
-              fontSize: '1.1rem'
-            }}
-          >
-            {repo.name}
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, ml: 1, flexShrink: 0 }}>
-            <Star sx={{ fontSize: '1rem', color: 'secondary.main' }} />
-            <Typography variant="caption" sx={{ fontWeight: 500, color: 'text.secondary' }}>
-              {repo.stars}
-            </Typography>
-          </Box>
-        </Box>
+        <Typography
+          variant="h6"
+          component="h4"
+          sx={{
+            fontWeight: 600,
+            color: 'text.primary',
+            mb: 2,
+            lineHeight: 1.3,
+            fontSize: '1.1rem'
+          }}
+        >
+          {repo.name}
+        </Typography>
         
         <Typography
           variant="body1"

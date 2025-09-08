@@ -108,7 +108,7 @@ const ProjectCard = ({ project }) => {
               }
             }}
           >
-            View Live
+            Website
           </Button>
           <Button
             variant="outlined"

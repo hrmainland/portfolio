@@ -37,40 +37,60 @@ const Portfolio = () => {
 
   const githubRepos = [
     {
-      name: "Weather Dashboard",
-      description: "A weather forecast application with location services",
-      technologies: ["JavaScript", "API Integration", "CSS"],
-      githubUrl: "https://github.com/yourusername/weather-dashboard",
-      stars: 45
+      name: "Surf Notifier",
+      description: "A Python tool that checks surf conditions using StormGlass API and sends notifications when conditions are favorable",
+      technologies: ["Python", "API Integration", "Pandas", "NumPy", "Pushover"],
+      githubUrl: "https://github.com/hrmainland/Surf-Notifier",
+    },    
+    {
+      name: "Habit Tracker",
+      description: "A command-line habit tracking tool that uses the Pixela API for GitHub-style graphs and Pushover for notifications",
+      technologies: ["Python", "Pixela API", "Pushover", "HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/hrmainland/HabitTracker",
+    },    
+    {
+      name: "Paint By Numbers",
+      description: "A web app that transforms uploaded photos into paint-by-numbers images using color quantization",
+      technologies: ["JavaScript", "HTML", "Node.js"],
+      githubUrl: "https://github.com/hrmainland/Paint-By-Numbers",
+    },    
+    {
+      name: "Portfolio",
+      description: "A modern, responsive portfolio website built with React, Material-UI, and Vite to showcase projects and skills",
+      technologies: ["React", "Material-UI", "Vite", "React Router", "GitHub Pages"],
+      githubUrl: "https://github.com/hrmainland/portfolio",
+    },    
+    {
+      name: "IQ Fit Solver",
+      description: "A Python solver for the IQ Fit puzzle game using depth-first search with backtracking and matplotlib visualization",
+      technologies: ["Python", "Jupyter Notebook", "Matplotlib", "NumPy"],
+      githubUrl: "https://github.com/hrmainland/IQ-Fit",
     },
     {
-      name: "Portfolio Website",
-      description: "Personal portfolio showcasing projects and skills",
-      technologies: ["React", "CSS", "Responsive Design"],
-      githubUrl: "https://github.com/yourusername/portfolio",
-      stars: 23
+      name: "Software Modelling Final Assignment",
+      description: "A Java-based Game of Thrones card game refactored to apply advanced design patterns and GRASP principles as part of a university project",
+      technologies: ["Java", "Design Patterns", "GRASP Principles", "SOLID"],
+      githubUrl: "https://github.com/hrmainland/Software-Modelling-Final-Assignment",
     },
     {
-      name: "Recipe Finder",
-      description: "Find recipes based on available ingredients",
-      technologies: ["Python", "Flask", "SQLite"],
-      githubUrl: "https://github.com/yourusername/recipe-finder",
-      stars: 67
+      name: "Artificial Intelligence Cachex Assignment",
+      description: "An AI agent for the Cachex board game using minimax, alpha-beta pruning, and heuristic evaluation functions, developed for university coursework",
+      technologies: ["Python", "Artificial Intelligence", "Minimax", "Alpha-Beta Pruning", "Iterative Deepening"],
+      githubUrl: "https://github.com/hrmainland/Artificial-Intelligence-Cachex-Assignment",
     },
     {
-      name: "Chat Application",
-      description: "Real-time messaging app with rooms",
-      technologies: ["Node.js", "Socket.io", "MongoDB"],
-      githubUrl: "https://github.com/yourusername/chat-app",
-      stars: 89
+      name: "Song Day",
+      description: "A full-stack collaborative playlist creation platform, using the Spotify API",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      githubUrl: "https://github.com/hrmainland/Song-Day",
     },
     {
-      name: "Budget Tracker",
-      description: "Personal finance management tool",
-      technologies: ["React Native", "Firebase"],
-      githubUrl: "https://github.com/yourusername/budget-tracker",
-      stars: 34
-    }
+      name: "Yelp Camp",
+      description: "A website for posting and reviewing campsites with full auth and session management",
+      technologies: ["CSS", "Express", "JavaScript", "MongoDB", "Cloudinary"],
+      githubUrl: "https://github.com/hrmainland/YelpCamp",
+    },
+            
   ];
 
 
@@ -195,7 +215,7 @@ const Portfolio = () => {
                 mb: 8
               }}
             >
-              Full-stack developer creating useful things
+              Full-stack devleoper blending function, simplicity, and impact
             </Typography>
             <Box
               sx={{
@@ -348,6 +368,55 @@ const Portfolio = () => {
               {[...githubRepos, ...githubRepos, ...githubRepos].map((repo, index) => (
                 <GitHubRepoCard key={`${repo.name}-${index}`} repo={repo} />
               ))}
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* Contact Section */}
+      <Box sx={{ 
+        bgcolor: 'background.default', 
+        py: { xs: 8, md: 12 },
+        borderTop: '1px solid',
+        borderColor: 'rgba(129, 140, 248, 0.1)'
+      }}>
+        <Container maxWidth="lg">
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography
+              variant="h2"
+              component="h2"
+              sx={{
+                fontWeight: 700,
+                mb: 6,
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                background: 'linear-gradient(135deg, #818cf8 0%, #f59e0b 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
+            >
+              Get In Touch
+            </Typography>
+            <Box sx={{ maxWidth: '400px', mx: 'auto' }}>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: 'text.secondary',
+                  fontSize: '1.1rem',
+                  mb: 2
+                }}
+              >
+                📧 hugo.mainland@example.com
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  color: 'text.secondary',
+                  fontSize: '1.1rem'
+                }}
+              >
+                📱 (555) 123-4567
+              </Typography>
             </Box>
           </Box>
         </Container>

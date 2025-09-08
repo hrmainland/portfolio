@@ -2,6 +2,8 @@
 
 A modern, responsive portfolio website built with React and Material-UI, showcasing my professional work and technical skills as a full-stack developer.
 
+View the website here [hugo-mainland.com](https://hugo-mainland.com)
+
 ## Features
 
 - **Responsive Design**: Optimized for all device sizes
@@ -50,9 +52,10 @@ npm run deploy
 
 - `npm run dev` - Start development server
 - `npm run build` - Build production app
-- `npm run lint` - Run code quality checks
 - `npm run deploy` - Deploy to GitHub Pages
 
 ## Contact
 
 Hugo Mainland - [GitHub Profile](https://github.com/hrmainland)
+
+Email: hrrmainland@gmail.com

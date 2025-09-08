@@ -333,22 +333,19 @@ const Portfolio = () => {
                 cursor: isHovering ? 'grabbing' : 'default'
               },
               '&::-webkit-scrollbar': {
-                height: isHovering ? '8px' : '0px',
-                transition: 'height 0.2s ease'
+                height: '8px'
               },
               '&::-webkit-scrollbar-track': {
-                background: 'rgba(255, 255, 255, 0.1)',
+                background: isHovering ? 'rgba(255, 255, 255, 0.1)' : 'transparent',
                 borderRadius: '4px',
-                opacity: isHovering ? 1 : 0,
-                transition: 'opacity 0.2s ease'
+                transition: 'background 0.2s ease'
               },
               '&::-webkit-scrollbar-thumb': {
-                background: 'rgba(129, 140, 248, 0.5)',
+                background: isHovering ? 'rgba(129, 140, 248, 0.5)' : 'transparent',
                 borderRadius: '4px',
-                opacity: isHovering ? 1 : 0,
-                transition: 'opacity 0.2s ease',
+                transition: 'background 0.2s ease',
                 '&:hover': {
-                  background: 'rgba(129, 140, 248, 0.7)'
+                  background: isHovering ? 'rgba(129, 140, 248, 0.7)' : 'transparent'
                 }
               }
             }}
@@ -376,19 +373,19 @@ const Portfolio = () => {
       {/* Contact Section */}
       <Box sx={{ 
         bgcolor: 'background.default', 
-        py: { xs: 8, md: 12 },
+        py: { xs: 4, md: 6 },
         borderTop: '1px solid',
         borderColor: 'rgba(129, 140, 248, 0.1)'
       }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography
-              variant="h2"
+              variant="h3"
               component="h2"
               sx={{
                 fontWeight: 700,
-                mb: 6,
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                mb: 4,
+                fontSize: { xs: '1.8rem', md: '2.2rem' },
                 background: 'linear-gradient(135deg, #818cf8 0%, #f59e0b 100%)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -397,25 +394,25 @@ const Portfolio = () => {
             >
               Get In Touch
             </Typography>
-            <Box sx={{ maxWidth: '400px', mx: 'auto' }}>
+            <Box sx={{ maxWidth: '300px', mx: 'auto' }}>
               <Typography
-                variant="body1"
+                variant="body2"
                 sx={{
                   color: 'text.secondary',
-                  fontSize: '1.1rem',
-                  mb: 2
+                  fontSize: '0.95rem',
+                  mb: 1
                 }}
               >
-                📧 hugo.mainland@example.com
+                📧 hrrmainland@gmail.com
               </Typography>
               <Typography
-                variant="body1"
+                variant="body2"
                 sx={{
                   color: 'text.secondary',
-                  fontSize: '1.1rem'
+                  fontSize: '0.95rem'
                 }}
               >
-                📱 (555) 123-4567
+                📱 (+61) 420 929 883
               </Typography>
             </Box>
           </Box>

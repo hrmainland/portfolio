@@ -17,6 +17,14 @@ const Portfolio = () => {
   const lastFrameTimeRef = useRef(0);
   
   const featuredProjects = [
+      {
+      title: "FrontPhoto",
+      description: "AI-powered professional headshots generated from a handful of selfies",
+      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Supabase", "Flux.dev"],
+      liveUrl: "https://frontphoto.ai/",
+      githubUrl: "https://github.com/hrmainland/frontphoto",
+      image: "/images/FP.png"
+    },
     {
       title: "Song Day",
       description: "A full-stack collaborative playlist creation platform, using the Spotify API",
@@ -248,7 +256,7 @@ const Portfolio = () => {
       </Box>
 
       {/* Featured Projects Section */}
-      <Container maxWidth="lg" sx={{ py: { xs: 8, md: 16 } }}>
+      <Container maxWidth="xl" sx={{ py: { xs: 8, md: 16 } }}>
         <Box sx={{ textAlign: 'center', mb: 10 }}>
           <Typography
             variant="h2"
@@ -277,9 +285,9 @@ const Portfolio = () => {
             A showcase of my recent work and the technologies I love working with
           </Typography>
         </Box>
-        <Grid container spacing={6} justifyContent="center">
+        <Grid container spacing={4} justifyContent="center">
           {featuredProjects.map((project, index) => (
-            <Grid item xs={12} md={6} key={index} sx={{ display: 'flex', justifyContent: 'center', maxWidth: '450px', mx: 'auto' }}>
+            <Grid item xs={12} sm={4} key={index}>
               <ProjectCard project={project} />
             </Grid>
           ))}
@@ -293,7 +301,7 @@ const Portfolio = () => {
         borderTop: '1px solid',
         borderColor: 'rgba(129, 140, 248, 0.1)'
       }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
           <Box sx={{ textAlign: 'center', mb: 10 }}>
             <Typography
               variant="h2"
